@@ -1,0 +1,6 @@
+<%= simple_form_for(task) do |f| %>
+  <%= f.input :title, label: 'Task title'%>
+  <%= f.input :details, label: 'Add the details'%>
+  <%= f.input :completed, label: 'Is it completed?' %>
+  <%= f.button :submit, class: "btn btn-primary mb-2" %>
+<% end %>

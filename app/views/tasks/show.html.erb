@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-between align-items-start">
+  <div>
+    <h1><%= @task.title %></h1>
+    <div class="card mb-3 p-3 my-2">
+      <p><%= @task.details %></p>
+    </div>
+    <div class="d-inline-flex align-items-baseline">
+      <% if @task.completed %>
+        <i class="far fa-check-square"></i>
+        <p class="ml-1">This task is completed</p>
+      <% else %>
+       <i class="far fa-square"></i>
+       <p class="ml-1">This task is not completed</p>
+      <% end %>
+    </div>
+  </div>
+ <div>
+    <%= link_to 'Edit Task', edit_task_path(@task), class: "btn btn-primary"%>
+ </div>
+</div>
+
+
+<%= link_to tasks_path do %>
+<i class="fas fa-undo"></i>
+<% end %>
